@@ -1,35 +1,29 @@
-#!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import Float32
+import random
 
 
-class SpaceMouseNode(Node):
+class SpacemouseNode(Node):
     def __init__(self):
-        super().__init__("spacemouse_node")
-        self.publisher = self.create_publisher(String, "human_input", 10)
-        self.timer = self.create_timer(5.0, self.publish_message)
-        self.get_logger().info("Space mouse node has been started")
+        super().__init__("spacemouse")
+        self.pub = self.create_publisher(Float32, "spacemouse/input", 10)
+        # 5Hz でランダム入力を publish
+        self.create_timer(1 / 5, self.timer_cb)
 
-    def publish_message(self):
-        msg = String()
-        msg.data = "Hello"
-        self.publisher.publish(msg)
-        self.get_logger().info(f'Publishing: "{msg.data}"')
+    def timer_cb(self):
+        # ダミー入力：-1.0～1.0 のランダム値
+        v = random.uniform(-1.0, 1.0)
+        self.pub.publish(Float32(data=v))
+        self.get_logger().info(f"[spacemouse] input={v:.2f}")
 
 
 def main():
     rclpy.init()
-    publisher = SpaceMouseNode()
-
-    try:
-        rclpy.spin(publisher)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        publisher.destroy_node()
-        rclpy.shutdown()
+    node = SpacemouseNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == "__main__":

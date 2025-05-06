@@ -2,25 +2,25 @@
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import Float32
 
 
 class LoggerSubscriber(Node):
     def __init__(self):
         super().__init__("logger_node")
-        self.create_subscription(String, "human_input", self.human_input_cb, 10)
-        self.create_subscription(String, "integrated", self.integrated_cb, 10)
-        self.create_subscription(String, "isaacsim_state", self.isaac_cb, 10)
+        self.create_subscription(Float32, "spacemouse/input", self.input_cb, 10)
+        self.create_subscription(Float32, "controller/target", self.controller_cb, 10)
+        self.create_subscription(Float32, "sim/state", self.isaac_cb, 10)
         self.get_logger().info("Logger node has been started")
 
-    def human_input_cb(self, msg):
-        self.get_logger().info(f'I heard: "{msg.data}" from human_input"')
+    def input_cb(self, msg):
+        self.get_logger().info(f'I heard: "{msg.data}" from spacemouse/input"')
 
-    def integrated_cb(self, msg):
-        self.get_logger().info(f'I heard: "{msg.data}" from integrated"')
+    def controller_cb(self, msg):
+        self.get_logger().info(f'I heard: "{msg.data}" from controller/target"')
 
     def isaac_cb(self, msg):
-        self.get_logger().info(f'I heard: "{msg.data}" from isaacsim_state"')
+        self.get_logger().info(f'I heard: "{msg.data}" from sim/state"')
 
 
 def main():

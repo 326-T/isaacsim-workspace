@@ -16,9 +16,9 @@ services:
     <<: *ros-service
     command: python3 /app/workspace/integrator/node.py
 
-  keyboard:
+  spacemouse:
     <<: *ros-service
-    command: python3 /app/workspace/keyboard/node.py
+    command: python3 /app/workspace/spacemouse/node.py
 
   logger:
     <<: *ros-service
