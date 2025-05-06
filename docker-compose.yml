@@ -1,0 +1,28 @@
+version: "3"
+
+x-ros-service: &ros-service
+  build: .
+  environment:
+    - ROS_DOMAIN_ID=0
+  networks:
+    - ros-net
+
+services:
+  isaacsim:
+    <<: *ros-service
+    command: python3 /app/workspace/isaacsim/node.py
+
+  integrator:
+    <<: *ros-service
+    command: python3 /app/workspace/integrator/node.py
+
+  keyboard:
+    <<: *ros-service
+    command: python3 /app/workspace/keyboard/node.py
+
+  logger:
+    <<: *ros-service
+    command: python3 /app/workspace/logger/node.py
+
+networks:
+  ros-net:
