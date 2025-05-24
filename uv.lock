@@ -570,11 +570,11 @@ wheels = [
 
 [[package]]
 name = "fsspec"
-version = "2025.5.0"
+version = "2025.5.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/f2/77/deb99b97981e2e191913454da82d406702405178631c31cd623caebaf1b1/fsspec-2025.5.0.tar.gz", hash = "sha256:e4f4623bb6221f7407fd695cc535d1f857a077eb247580f4ada34f5dc25fd5c8", size = 300989, upload-time = "2025-05-20T15:46:22.484Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/00/f7/27f15d41f0ed38e8fcc488584b57e902b331da7f7c6dcda53721b15838fc/fsspec-2025.5.1.tar.gz", hash = "sha256:2e55e47a540b91843b755e83ded97c6e897fa0942b11490113f09e9c443c2475", size = 303033, upload-time = "2025-05-24T12:03:23.792Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2c/a9/a7022f58e081149ec0184c31ea81dcee605e1d46380b48122e1ef94ac24e/fsspec-2025.5.0-py3-none-any.whl", hash = "sha256:0ca253eca6b5333d8a2b8bd98c7326fe821f1f0fdbd34e1b445bddde8e804c95", size = 196164, upload-time = "2025-05-20T15:46:20.89Z" },
+    { url = "https://files.pythonhosted.org/packages/bb/61/78c7b3851add1481b048b5fdc29067397a1784e2910592bc81bb3f608635/fsspec-2025.5.1-py3-none-any.whl", hash = "sha256:24d3a2e663d5fc735ab256263c4075f374a174c3410c0b25e5bd1970bceaa462", size = 199052, upload-time = "2025-05-24T12:03:21.66Z" },
 ]
 
 [[package]]
@@ -615,15 +615,9 @@ wheels = [
 
 [[package]]
 name = "isaacsim"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "isaacsim-kernel" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/ae/98/05e01c94aa587b4bbc941458e83682b3dff8755aff38d7ee897e88324983/isaacsim-4.5.0.0.tar.gz", hash = "sha256:37cdfc05b7bfa38394a8f467be26305d7da1df7d3f8991396e242757a576a76a", size = 1061, upload-time = "2025-01-29T23:36:26.216Z" }
-
-[package.optional-dependencies]
-all = [
     { name = "isaacsim-app" },
     { name = "isaacsim-asset" },
     { name = "isaacsim-benchmark" },
@@ -645,54 +639,50 @@ all = [
     { name = "isaacsim-test" },
     { name = "isaacsim-utils" },
 ]
-extscache = [
-    { name = "isaacsim-extscache-kit" },
-    { name = "isaacsim-extscache-kit-sdk" },
-    { name = "isaacsim-extscache-physics" },
-]
+sdist = { url = "https://files.pythonhosted.org/packages/3a/ab/5049162ff8632aa960f9d0ff86c752748f89258c3cde777922a3e73aac92/isaacsim-4.2.0.2.tar.gz", hash = "sha256:1827bff84ab77b955d575a3807ec162c7bab35c0536caa1be4e2cda3188d0b39", size = 886, upload-time = "2024-09-20T03:16:29.469Z" }
 
 [[package]]
 name = "isaacsim-app"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-kernel" },
     { name = "pyperclip" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/16/65/55b1fd45765ea8d8a9c43441620f9a616ab72287a0d2295194e748c28d6f/isaacsim_app-4.5.0.0.tar.gz", hash = "sha256:318d7eb78635649c156f22b59a4c835f2be87824b30f314c3ca233e896d924d5", size = 865, upload-time = "2025-01-29T23:31:24.639Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/86/af/4f09ee828ef69ae5af56d95e2e139ac086d7e34c6d1468d615fcea3cb5f7/isaacsim_app-4.2.0.2.tar.gz", hash = "sha256:3625420f3a1a34555f0c4ae672104d5f060df7c1b13c275e6b90eed7c93721e1", size = 791, upload-time = "2024-09-20T03:11:23.479Z" }
 
 [[package]]
 name = "isaacsim-asset"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-storage" },
     { name = "isaacsim-utils" },
     { name = "pillow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d2/08/ffbed27f3bec96f0d95c4f42f43ca0d9329796a3e596c5c8fb1d6524b1c5/isaacsim_asset-4.5.0.0.tar.gz", hash = "sha256:2d1b878d100dd8b10051f57a90eee8fbb363a1ac2410fd2aae2f4e772a13f6b8", size = 886, upload-time = "2025-01-29T23:50:29.495Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/74/4c/5c12c2a767f83031b9acbe8894beb6d13a436e7613c6ad78e98cb1900afd/isaacsim_asset-4.2.0.2.tar.gz", hash = "sha256:f2dc2788a789179ce8d833519c24eab9e5688e002027e8bc09749c0d0ea1e4b1", size = 808, upload-time = "2024-09-20T03:10:29.9Z" }
 
 [[package]]
 name = "isaacsim-benchmark"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-robot" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/56/2c/197440ba4fb5e25375e547e2a396c4db131f0f19fcedfedd8c4bb4d3b6f6/isaacsim_benchmark-4.5.0.0.tar.gz", hash = "sha256:d8242307945abf521c7fe9761a728a4eb20e3c9f9fa2f3a4ba1e72a7af0084a9", size = 864, upload-time = "2025-01-29T23:45:23.212Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/86/f3/79eb20eef8e5cfd6741281c5188d7a621db2ce8bbcf18ac8d215abf1f6b7/isaacsim_benchmark-4.2.0.2.tar.gz", hash = "sha256:41157eca49e4d37d5b40537b83cb461359979b2f6e846a42e63e2c700ff8b855", size = 782, upload-time = "2024-09-20T03:25:21.311Z" }
 
 [[package]]
 name = "isaacsim-code-editor"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-kernel" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b8/cf/cbbd65350c5c2190e2f273dfa2f55c524e65f3b88618a7375864e8898f88/isaacsim_code_editor-4.5.0.0.tar.gz", hash = "sha256:049e3e91a610d3e577aa9de6eedbb998b664d1a97b4440042a2e12dd35e1c6b4", size = 878, upload-time = "2025-01-29T23:37:31.018Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/a2/3cd3c4bba8919d37a53d05dfb72849061ebd05bbc51e18b64f74c1c15556/isaacsim_code_editor-4.2.0.2.tar.gz", hash = "sha256:5485b86a37382d6109b6512fc6beb4287a60d1170ba19af9ad656e3e095dc9f5", size = 793, upload-time = "2024-09-20T03:17:25.086Z" }
 
 [[package]]
 name = "isaacsim-core"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
@@ -705,135 +695,135 @@ dependencies = [
     { name = "scipy" },
     { name = "torch" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c7/d9/ad877196e2be15d50c137ae107d0c2481933a224333fafc4034fbb8980f8/isaacsim_core-4.5.0.0.tar.gz", hash = "sha256:a2dea1071848585b764d60e0d958777977bee375c761d4ed61282c01b0d7ccdf", size = 919, upload-time = "2025-01-29T23:34:14.433Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/97/10/d803f41166f0d95ded6d74e696ba144a01063cee1058afd75cf22c87436e/isaacsim_core-4.2.0.2.tar.gz", hash = "sha256:9b80ca2e2fdddad877cc9a8c293ed75f84e14bbe8ff7d59494aa6b5b5ad8a4f9", size = 842, upload-time = "2024-09-20T03:13:24.427Z" }
 
 [[package]]
 name = "isaacsim-cortex"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-robot" },
     { name = "isaacsim-ros1" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f4/cb/0b943400cae34d05079475c02fb8e6ba2a565d24e523beafb9f655a3774a/isaacsim_cortex-4.5.0.0.tar.gz", hash = "sha256:b2982caae080e2af623e1155a4eeab8df52c470b6f487447d71ff18b0c80e106", size = 903, upload-time = "2025-01-29T23:32:26.594Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/30/29/304ba9973d154fbb1eed8303b497f3f768d1f1ddde5a3bad63173c8c8e39/isaacsim_cortex-4.2.0.2.tar.gz", hash = "sha256:5d675dbb88f159fcd78dde2041a4e91a0ab2afc3f17cf5a4368b7ff3a535c744", size = 821, upload-time = "2024-09-20T03:12:30.043Z" }
 
 [[package]]
 name = "isaacsim-example"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-cortex" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/13/7f/199b8c4c969ecb5d897e20174f118245e5c70d72f8eb4a5db96a1a74046c/isaacsim_example-4.5.0.0.tar.gz", hash = "sha256:eb99f172ed80ff028f3795f40291e7df910fa71144c3aad045a0994a457d7f7d", size = 850, upload-time = "2025-01-29T23:39:29.665Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a6/3c/4f44601b95dbda015ba02b49ba19b4abe7c04259d978809e40fb6d3fb1e1/isaacsim_example-4.2.0.2.tar.gz", hash = "sha256:5b29b8c3f8143a01926ed23f8febfd0a3f036f24902d4ec8b0b7288507f82758", size = 768, upload-time = "2024-09-20T03:19:29.314Z" }
 
 [[package]]
 name = "isaacsim-extscache-kit"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/47/41/36faf63ac88ae07ca7bc66a32a25126f34f9d4f1b532e73485c47f55fd00/isaacsim_extscache_kit-4.5.0.0.tar.gz", hash = "sha256:2c04b8646e5cd570cdf3cd05cf8a3869cd39f7e4428b9b03074747f6e722dbe0", size = 863, upload-time = "2025-01-29T23:49:03.416Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e1/51/932ca6b7ae104f2be2fe3ba3372488975625d038c739b38a16bbd45c3f04/isaacsim_extscache_kit-4.2.0.2.tar.gz", hash = "sha256:b73bfc39a4acebc56b76445190933d598c37b54744aab5fed045c953e9660485", size = 782, upload-time = "2024-09-20T02:48:56.715Z" }
 
 [[package]]
 name = "isaacsim-extscache-kit-sdk"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b3/89/2d843457cd07f45f748249b18edc1952617d3c56eaf01fe9767d176b1008/isaacsim_extscache_kit_sdk-4.5.0.0.tar.gz", hash = "sha256:9b8388de7261672e992793db3a63e480302ab258a6acc6d5601b1caaaf842c26", size = 875, upload-time = "2025-01-29T23:41:25.343Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d5/4d/43b95048e4f7fe5ffe671903e12acbc890996ec48fc81d40faa4d5faead0/isaacsim_extscache_kit_sdk-4.2.0.2.tar.gz", hash = "sha256:12227a410f10cec837dcdc84397b09d15298bf9b6a8323eaabb45efff9488189", size = 793, upload-time = "2024-09-20T03:01:36.751Z" }
 
 [[package]]
 name = "isaacsim-extscache-physics"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/34/32/5b793f9ad28543646bbc63ede97bbcd19ef98eb16fa184dd91a62ab5529f/isaacsim_extscache_physics-4.5.0.0.tar.gz", hash = "sha256:6e0869f1c76b51e74f5c722fcd370be23b18a6afe264ee335e3d46cce19afa02", size = 869, upload-time = "2025-01-29T23:34:50.633Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/26/39/f1e9d9b87222969ba456d485e39644fdfb57e99a77f075e82acea0b67b1f/isaacsim_extscache_physics-4.2.0.2.tar.gz", hash = "sha256:6555bc86103a330d5527641e5792302e6b1d30808f0225c3af24d33c9a7d66df", size = 789, upload-time = "2024-09-20T02:54:24.529Z" }
 
 [[package]]
 name = "isaacsim-gui"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/72/e4/d77f456cec7681bcdfee3d61a6e37a62736294ce97c59819a60a07925f80/isaacsim_gui-4.5.0.0.tar.gz", hash = "sha256:aaafc2b4835dabe04df8b96af9e8f493f57fe16e3205e2f7d64170c014a206da", size = 870, upload-time = "2025-01-29T23:37:24.921Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a7/26/3c6f3c1c3020048d0b952b4e8aee89c572af3c38211d5ae9e8d2f44fb9c6/isaacsim_gui-4.2.0.2.tar.gz", hash = "sha256:5f0f429fff228814c8c2b15e823cda634b6d303c2fd35b506a1012d3f6438981", size = 793, upload-time = "2024-09-20T03:17:32.804Z" }
 
 [[package]]
 name = "isaacsim-kernel"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "omniverse-kit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d7/cb/9a2633b69ac26848d63487a19a1d2c1681e3069047894f53fed7033807eb/isaacsim_kernel-4.5.0.0.tar.gz", hash = "sha256:e0c4c251373076d6112ed703c632b6f70c7a55d3256d6c49f9495bbe1a0ba1dc", size = 854, upload-time = "2025-01-29T23:47:33.613Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/ec/e1c4278e4abe0208b5f391761be8301c27f0ebab555155485fc0c7bdd54e/isaacsim_kernel-4.2.0.2.tar.gz", hash = "sha256:4a9c3964321811266d741ffe46427d117d7923ab423683b02866a99dead870c3", size = 777, upload-time = "2024-09-20T03:28:38.367Z" }
 
 [[package]]
 name = "isaacsim-replicator"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-core" },
     { name = "isaacsim-storage" },
     { name = "pillow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/de/7d/fbbc7f02bb2b6c986c7749d70d393ead8f5d4c9f320925129ab8e11659ae/isaacsim_replicator-4.5.0.0.tar.gz", hash = "sha256:50e5d002e3276feaf9644620a3ae5a115ef9ea7cb3e1dd4e9ae093dfc861d284", size = 922, upload-time = "2025-01-29T23:47:27.866Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/62/d717e8d687efcd26e20730ad2dd7229b907d1e9d86f92a63aad4bf8ad9fe/isaacsim_replicator-4.2.0.2.tar.gz", hash = "sha256:0148d003381f9f3b418df5b6d65ebbecd6b0b3e486577fc11c988b9212307e9f", size = 844, upload-time = "2024-09-20T03:28:34.881Z" }
 
 [[package]]
 name = "isaacsim-rl"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "gymnasium" },
     { name = "isaacsim-benchmark" },
     { name = "isaacsim-robot" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e8/25/5c1977ada72a08cdd7b772a92d3a7a59edad65a54f65cdda1a46163b2584/isaacsim_rl-4.5.0.0.tar.gz", hash = "sha256:fb0948f4e64687f09c900536ef865efdd8233568fb015bf4926df54a4f8f1514", size = 872, upload-time = "2025-01-29T23:48:22.653Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ad/34/f4d76df53c9210543290bc302b5a11220c556639c0189bc02a323459c091/isaacsim_rl-4.2.0.2.tar.gz", hash = "sha256:bbf8e48bd0222472cac18111f445f55d5657696216d0240eccab4d8c129a34c8", size = 800, upload-time = "2024-09-20T03:51:19.646Z" }
 
 [[package]]
 name = "isaacsim-robot"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-robot-motion" },
     { name = "isaacsim-sensor" },
     { name = "osqp" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/dd/f0/6d7ff62c55b552fd05d5ca9a284fe8f7500c1987aca81af13d3ae7245569/isaacsim_robot-4.5.0.0.tar.gz", hash = "sha256:93381f6608301ce39151fe1a426561f9acbade29d24a6f56d95f73e4dc08dd8e", size = 874, upload-time = "2025-01-29T23:39:24.093Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5f/44/72dd6184e73ced8aafea52bf8cb33b30e5b596e3375b0446e98de27acab3/isaacsim_robot-4.2.0.2.tar.gz", hash = "sha256:b02c443e11bba28f6ed5a4311a0d98d5ccc6970b1ffc0e5f7166a3c2740b6694", size = 801, upload-time = "2024-09-20T03:46:23.3Z" }
 
 [[package]]
 name = "isaacsim-robot-motion"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-gui" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d2/a1/ddcb0f67123dfc552301730a54ea4229720ef3d9c99ffc36aa823375c1fb/isaacsim_robot_motion-4.5.0.0.tar.gz", hash = "sha256:2fc827f8a7e931f71542bef64abb18f29c92df1e47247d1d3424558dbb200d07", size = 890, upload-time = "2025-01-29T23:43:25.32Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/74/8e/2d3b86995f000dc7ce9166b1848d4469866524ad129f192384685dc4847b/isaacsim_robot_motion-4.2.0.2.tar.gz", hash = "sha256:403ad004a25beb86f3855a50cec660d3d1fad5bf7ec14fbef850ccdaed26ba0a", size = 808, upload-time = "2024-09-20T03:46:42.518Z" }
 
 [[package]]
 name = "isaacsim-robot-setup"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-robot-motion" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8a/fd/84c5ed0abd2503bc962f02647955c70c18469c6d6b33a015053bf30a47fe/isaacsim_robot_setup-4.5.0.0.tar.gz", hash = "sha256:40d50318dcb373f388a9648f8a80b08f722fdd9ae24bc2768d4b1e0e619cb7e2", size = 871, upload-time = "2025-01-29T23:36:22.671Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/88/b2/f6faa50ddad1285549483b4e1e7ae52c3a3c455a3073eb394878ceb34a6e/isaacsim_robot_setup-4.2.0.2.tar.gz", hash = "sha256:82b5cd763073454c8ad89057242fcf8b389cf2ea0f3f7446b781ceca0a499fe6", size = 790, upload-time = "2024-09-20T03:41:01.441Z" }
 
 [[package]]
 name = "isaacsim-ros1"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-sensor" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/05/90/459dae7a3c860b628d84575a60d3d4e5471b1f88b5b960d1eb0f144eb38d/isaacsim_ros1-4.5.0.0.tar.gz", hash = "sha256:04ac171b4bb0b695606a8b4b12961030619b450d07770a0171c339b33154b53a", size = 868, upload-time = "2025-01-29T23:38:24.179Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/43/52/73d5c6a7eaf3cc789bff60bed4eec14b3dbb070066a8d20c07f946b67170/isaacsim_ros1-4.2.0.2.tar.gz", hash = "sha256:04ede26284332c805adc91afd3b1c42ac38ea630fc036a7c6ea1273b08a74d36", size = 788, upload-time = "2024-09-20T03:46:22.042Z" }
 
 [[package]]
 name = "isaacsim-ros2"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-sensor" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/64/48/a0d8374eef4201047ea031d5abf2d10c86f5e6920bc70fb98d2a34c048d4/isaacsim_ros2-4.5.0.0.tar.gz", hash = "sha256:849d12182d218a7935fb18f6df18a630647c8889827671acf9e0f4d900cfdf3a", size = 868, upload-time = "2025-01-29T23:38:23.476Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/64/69/3e158a209402fac1b10cb92fac62e1ef9e6ec3f1a41a72016e357e525dff/isaacsim_ros2-4.2.0.2.tar.gz", hash = "sha256:2b5b40f6944abe8f4fe0404b7834cbea3464dededdca90d74ff5221a5ea869e4", size = 791, upload-time = "2024-09-20T03:46:24.347Z" }
 
 [[package]]
 name = "isaacsim-sensor"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-gui" },
@@ -841,44 +831,44 @@ dependencies = [
     { name = "isaacsim-utils" },
     { name = "pillow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/74/2d/3d334533ed11caaeff435572109f0d99289e187bd21cae4f5d9d4e5500ee/isaacsim_sensor-4.5.0.0.tar.gz", hash = "sha256:b2b6d0341b4bdb587d8b0d4ca69761158be6f6474ecc1e152ddcfd96622dab7e", size = 881, upload-time = "2025-01-29T23:35:21.628Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d2/dc/4640155628e73a99053e0cc481367c6f9e2f031f0b5d1ee41a0d96bd43a5/isaacsim_sensor-4.2.0.2.tar.gz", hash = "sha256:a72fc4a0d41ce2ba9a66e87bcc319789ab98b7a2aba0506e782c867148200325", size = 798, upload-time = "2024-09-20T03:56:11.741Z" }
 
 [[package]]
 name = "isaacsim-storage"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-kernel" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/04/76/60088cb4d332b04334319756e84dc55d0c478a88ba0bda09cd1704b99e57/isaacsim_storage-4.5.0.0.tar.gz", hash = "sha256:89cb1b73f547f7b935c83c8b1b343f1008424e792fe66dc28c4f826632880497", size = 861, upload-time = "2025-01-29T23:32:22.383Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a5/3d/c21377ed8b1bf1a6f2c3ef146652f48134308e9807f6a573711acaea489e/isaacsim_storage-4.2.0.2.tar.gz", hash = "sha256:8ef8a94cd735e4834fd7bc0f43f89e47975704dd34cf9d19cdafed7fc3358edd", size = 781, upload-time = "2024-09-20T03:56:07.841Z" }
 
 [[package]]
 name = "isaacsim-template"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-gui" },
     { name = "isaacsim-storage" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d7/f4/97696c14b899f338d24b5203f4f9f1e2b24e804179e1d4d277a2b8473ce1/isaacsim_template-4.5.0.0.tar.gz", hash = "sha256:9feeb57a2d6557b216b1e873534676c78249d0364793154e85625f4bb3072008", size = 855, upload-time = "2025-01-29T23:43:25.002Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/32/2c/4fd0f5d8e7ef8f57417a41bea4653d8d1439a0c30abf25b3b0d3c009421e/isaacsim_template-4.2.0.2.tar.gz", hash = "sha256:b888520315ef7545f4714ef37dea53221d57a0ba79705d9366817100bc440a8f", size = 777, upload-time = "2024-09-20T03:46:42.794Z" }
 
 [[package]]
 name = "isaacsim-test"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-robot" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/53/24/1fed6adb60da7c90fd52341542153dd93ef2bb2ebd037ee7d69b37aef194/isaacsim_test-4.5.0.0.tar.gz", hash = "sha256:1442719646e85f2d020254d4f055fb79ddeacd0f1f93796f264adf22210381de", size = 855, upload-time = "2025-01-29T23:41:27.778Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/45/43/bc69acaf8ea438e1f2424bf7f9226c9a0caefa658f9e05bd992a96b1b42b/isaacsim_test-4.2.0.2.tar.gz", hash = "sha256:64871c8eb593dcdba8f51f769b38b226b13504246c9b645471e89868ce00b44a", size = 775, upload-time = "2024-09-20T03:46:29.432Z" }
 
 [[package]]
 name = "isaacsim-utils"
-version = "4.5.0.0"
+version = "4.2.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "isaacsim-gui" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/87/52/53a6048fdca06888647db77fa9f30fc37b8c9acc63fc99864874926c8ee3/isaacsim_utils-4.5.0.0.tar.gz", hash = "sha256:85ffa7893e2bf67f468d7925c5e9596819f17cebda0f1509b79502c3fc98220d", size = 846, upload-time = "2025-01-29T23:38:30.407Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/0d/a9247259dc72262c7d5fdca71aa774989721cc9a58b5ea418ac179e1f29e/isaacsim_utils-4.2.0.2.tar.gz", hash = "sha256:abab794e60e4abd296f65d0bc031557135f0d427bf501b951e1e04984c3cb28b", size = 766, upload-time = "2024-09-20T03:46:20.708Z" }
 
 [[package]]
 name = "isaacsim-workspace"
@@ -888,7 +878,10 @@ dependencies = [
     { name = "catkin-pkg" },
     { name = "colcon-common-extensions" },
     { name = "empy" },
-    { name = "isaacsim", extra = ["all", "extscache"] },
+    { name = "isaacsim" },
+    { name = "isaacsim-extscache-kit" },
+    { name = "isaacsim-extscache-kit-sdk" },
+    { name = "isaacsim-extscache-physics" },
     { name = "lark-parser" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
@@ -907,7 +900,10 @@ requires-dist = [
     { name = "catkin-pkg", specifier = ">=1.0.0" },
     { name = "colcon-common-extensions", specifier = ">=0.3.0" },
     { name = "empy", specifier = "==3.3.4" },
-    { name = "isaacsim", extras = ["all", "extscache"], specifier = "==4.5.0" },
+    { name = "isaacsim", specifier = "==4.2.0.2" },
+    { name = "isaacsim-extscache-kit", specifier = "==4.2.0.2" },
+    { name = "isaacsim-extscache-kit-sdk", specifier = "==4.2.0.2" },
+    { name = "isaacsim-extscache-physics", specifier = "==4.2.0.2" },
     { name = "lark-parser", specifier = ">=0.12.0" },
     { name = "pydantic" },
     { name = "pydantic-settings" },
@@ -1201,9 +1197,9 @@ wheels = [
 
 [[package]]
 name = "omniverse-kit"
-version = "106.5.0.162521"
+version = "106.1.0.140981"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/f8/1c/c957131be37bf260c666a2e22b16d6cf3ff6deaf3389281672b880833953/omniverse_kit-106.5.0.162521.tar.gz", hash = "sha256:2dd0e6d0f752b6d9dea2148e511626521623e13aeb8b7cfe3f44d67cc52d7ee0", size = 1989, upload-time = "2024-12-18T22:13:27.883Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7b/e7/85b0e2897a379375e183d53c1f2b8dac76d43b4d4316e91fef80fa905799/omniverse_kit-106.1.0.140981.tar.gz", hash = "sha256:00570da637a465c2d6d9f9950e9eb9cac2a10f14879c48eb77f475c19cdf3b2d", size = 1929, upload-time = "2024-09-17T18:53:25.6Z" }
 
 [[package]]
 name = "opencv-python"
