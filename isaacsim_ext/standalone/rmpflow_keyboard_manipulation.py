@@ -1,6 +1,6 @@
 from operator import itemgetter
 
-from omni.isaac.kit import SimulationApp
+from isaacsim import SimulationApp
 
 simulation_app = SimulationApp(launch_config={"headless": False, "multi_gpu": False})
 from omni.isaac.core import World
