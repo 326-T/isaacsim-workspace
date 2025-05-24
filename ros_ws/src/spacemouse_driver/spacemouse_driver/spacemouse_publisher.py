@@ -2,11 +2,9 @@ from typing import NamedTuple
 
 import pyspacemouse
 import rclpy
-from geometry_msgs.msg import Pose
+from interfaces.msg import SpaceMouseData
 from rclpy.node import Node
 from scipy.spatial.transform import Rotation as R
-
-from interfaces.msg import SpaceMouseData
 
 
 class SpaceMousePublisher(Node):
@@ -21,9 +19,6 @@ class SpaceMousePublisher(Node):
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
         # 初期化
-        self.pose = Pose()
-        self.pose.orientation.w = 1.0  # 単位クォータニオン
-        self.gripper_open = False
         success = pyspacemouse.open(
             dof_callback=pyspacemouse.print_state,
             button_callback=pyspacemouse.print_buttons,
@@ -54,19 +49,17 @@ class SpaceMousePublisher(Node):
         msg.pose.orientation.y = quat[1]
         msg.pose.orientation.z = quat[2]
         msg.pose.orientation.w = quat[3]
-        msg.gripper_open = state.buttons[0] > 0
-        msg.gripper_close = state.buttons[1] > 0
+        msg.gripper = [state.buttons[0] > 0, state.buttons[1] > 0]
 
         # パブリッシュ
         self.publisher.publish(msg)
 
         # ログ出力（1秒ごと）
-        self.get_logger().info(
+        self.get_logger().debug(
             f"Publishing: pos=({msg.pose.position.x:.3f}, "
             f"{msg.pose.position.y:.3f}, {msg.pose.position.z:.3f}), "
             f"orient=({msg.pose.orientation.x:.3f}, "
-            f"gripper_open={msg.gripper_open}, "
-            f"gripper_close={msg.gripper_close}"
+            f"gripper={msg.gripper}"
         )
 
 
