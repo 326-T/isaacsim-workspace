@@ -20,8 +20,8 @@ class ConvenienceStore:
         num_product_rows: int = 1,
         gap: int = 0,
         num_product_columns: int = 1,
-        store_usd_path: str = "aist_sb_ur5e/static/usd/tana_zentai.usd",
-        goods_usd_path: str = "aist_sb_ur5e/static/usd/java_curry_chukara/java_curry_chukara.usd",
+        store_usd_path: str = "isaacsim_ext/static/usd/tana_zentai.usd",
+        goods_usd_path: str = "isaacsim_ext/static/usd/java_curry_chukara/java_curry_chukara.usd",
     ) -> None:
         """
         Initialize ConvenienceStore
@@ -35,10 +35,10 @@ class ConvenienceStore:
                 Defaults to 1.
             store_usd_path (str, optional):
                 コンビニエンスストア棚のUSDファイルのパス.
-                Defaults to "aist_sb_ur5e/static/usd/tana_zentai.usd".
+                Defaults to "isaacsim_ext/static/usd/tana_zentai.usd".
             goods_usd_path (str, optional):
                 商品のUSDファイルのパス.
-                Defaults to "aist_sb_ur5e/static/usd/java_curry_chukara/java_curry_chukara.usd".
+                Defaults to "isaacsim_ext/static/usd/java_curry_chukara/java_curry_chukara.usd".
         """
         self._shelf: XFormPrim = create_convex_rigid_body(
             name="shelf",

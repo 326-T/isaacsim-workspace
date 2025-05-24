@@ -1,6 +1,5 @@
 from operator import itemgetter
 
-import isaacsim
 import numpy as np
 from omni.isaac.kit import SimulationApp
 
@@ -11,9 +10,9 @@ from omni.isaac.core.prims import XFormPrim
 from omni.isaac.core.utils.types import ArticulationAction
 from omni.isaac.manipulators.grippers import ParallelGripper
 
-from aist_sb_ur5e.callback import Logger, TimelineCallback
-from aist_sb_ur5e.controller import DiffusionPolicyController, RMPFlowController
-from aist_sb_ur5e.task import ConveniPickupTask
+from isaacsim_ext.callback import Logger, TimelineCallback
+from isaacsim_ext.controller import DiffusionPolicyController, RMPFlowController
+from isaacsim_ext.task import ConveniPickupTask
 
 my_world: World = World(stage_units_in_meters=1.0)
 

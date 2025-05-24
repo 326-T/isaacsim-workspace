@@ -14,7 +14,7 @@ from isaacsim.core.api.tasks.base_task import BaseTask
 from omni.isaac.sensor import Camera, ContactSensor
 from PIL import Image
 
-from aist_sb_ur5e.env import get_settings
+from isaacsim_ext.env import get_settings
 
 
 class Logger:

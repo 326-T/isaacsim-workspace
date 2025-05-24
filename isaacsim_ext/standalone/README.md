@@ -2,7 +2,7 @@
 
 isaac sim の起動無しで実行できる。Nucleaus の起動は必須。
 
-各種クラスは[こちら参照](../aist_sb_ur5e/)。
+各種クラスは[こちら参照](../isaacsim_ext/)。
 
 ## UR5e + Robotiq 2F140 をキーボードで操作する
 

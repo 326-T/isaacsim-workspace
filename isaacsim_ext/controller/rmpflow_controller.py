@@ -20,9 +20,9 @@ class RMPFlowController(MotionPolicyController):
         robot_articulation: Articulation,
         name: str = "RMPFlowController",
         physics_dt: float = 1.0 / 60.0,
-        robot_description_path: str = "aist_sb_ur5e/static/rmpflow/robot_descriptor.yml",
-        rmpflow_config_path: str = "aist_sb_ur5e/static/rmpflow/ur5e_rmpflow_common.yml",
-        urdf_path: str = "aist_sb_ur5e/static/urdf/ur5e.urdf",
+        robot_description_path: str = "isaacsim_ext/static/rmpflow/robot_descriptor.yml",
+        rmpflow_config_path: str = "isaacsim_ext/static/rmpflow/ur5e_rmpflow_common.yml",
+        urdf_path: str = "isaacsim_ext/static/urdf/ur5e.urdf",
     ) -> None:
         """
         Initialize RMPFlowController
@@ -38,13 +38,13 @@ class RMPFlowController(MotionPolicyController):
                 Defaults to 1.0/60.0.
             robot_description_path (str, optional):
                 操作するロボットの設定ファイルのパス.
-                Defaults to "aist_sb_ur5e/static/rmpflow/robot_descriptor.yml".
+                Defaults to "isaacsim_ext/static/rmpflow/robot_descriptor.yml".
             rmpflow_config_path (str, optional):
                 RMPFlowの設定ファイルのパス.
-                Defaults to "aist_sb_ur5e/static/rmpflow/ur5e_rmpflow_common.yml".
+                Defaults to "isaacsim_ext/static/rmpflow/ur5e_rmpflow_common.yml".
             urdf_path (str, optional):
                 ロボットのURDFファイルのパス.
-                Defaults to "aist_sb_ur5e/static/urdf/ur5e.urdf".
+                Defaults to "isaacsim_ext/static/urdf/ur5e.urdf".
         """
         self.rmp_flow = RmpFlow(
             robot_description_path=robot_description_path,

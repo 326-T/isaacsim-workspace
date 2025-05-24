@@ -33,7 +33,7 @@ class UR5eSingleManipulator(SingleManipulator):
     def __init__(
         self,
         name: str = "UR5e",
-        usd_path: str = "aist_sb_ur5e/static/usd/ur5e_with_gripper_and_frame.usd",
+        usd_path: str = "isaacsim_ext/static/usd/ur5e_with_gripper_and_frame.usd",
         prim_path: str = "/World/ur5e_with_gripper/ur5e/base_link",
         end_effector_prim_path: str = "/World/ur5e_with_gripper/robotiq_2f140/robotiq_arg2f_base_link",
         position: Optional[np.ndarray] = None,

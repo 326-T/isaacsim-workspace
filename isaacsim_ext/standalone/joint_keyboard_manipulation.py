@@ -1,4 +1,3 @@
-import isaacsim
 from omni.isaac.kit import SimulationApp
 
 simulation_app = SimulationApp(launch_config={"headless": False, "multi_gpu": False})
@@ -8,9 +7,9 @@ from omni.isaac.core.articulations.articulation import Articulation
 from omni.isaac.core.utils.types import ArticulationAction
 from omni.isaac.manipulators.grippers import ParallelGripper
 
-from aist_sb_ur5e.callback import Logger, TimelineCallback
-from aist_sb_ur5e.controller import JointController
-from aist_sb_ur5e.task import ConveniPickupTask
+from isaacsim_ext.callback import Logger, TimelineCallback
+from isaacsim_ext.controller import JointController
+from isaacsim_ext.task import ConveniPickupTask
 
 my_world = World(stage_units_in_meters=1.0)
 

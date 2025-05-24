@@ -6,7 +6,6 @@ from omni.isaac.core.scenes.scene import Scene
 from omni.isaac.core.tasks import BaseTask
 from omni.isaac.core.utils.numpy.rotations import euler_angles_to_quats
 from omni.isaac.sensor.scripts.camera import Camera
-from omni.kit.viewport.utility.legacy_viewport_window import LegacyViewportWindow
 from omni.kit.viewport.window.window import ViewportWindow
 from pxr.Usd import Prim
 
@@ -23,14 +22,14 @@ class ConveniPickupTask(BaseTask):
         BaseTask ([type]): [description]
     """
 
-    def __init__(self, static_path: str = "aist_sb_ur5e/static") -> None:
+    def __init__(self, static_path: str = "isaacsim_ext/static") -> None:
         """
         Initialize ConveniPickupTask
 
         Args:
             static_path (str, optional):
                 静的ファイルを格納したディレクトリのパス.
-                Defaults to "aist_sb_ur5e/static".
+                Defaults to "isaacsim_ext/static".
         """
         super().__init__(
             name="conveni_pickup_task",

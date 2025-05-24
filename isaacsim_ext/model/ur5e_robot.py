@@ -109,8 +109,8 @@ class UR5e(Robot):
             )
 
         self._kinematics = LulaKinematicsSolver(
-            robot_description_path="aist_sb_ur5e/static/rmpflow/robot_descriptor.yml",
-            urdf_path="aist_sb_ur5e/static/urdf/ur5e.urdf",
+            robot_description_path="isaacsim_ext/static/rmpflow/robot_descriptor.yml",
+            urdf_path="isaacsim_ext/static/urdf/ur5e.urdf",
         )
         self._kinematics.set_robot_base_pose(
             robot_position=np.array(object=[0.0, 0.0, 1.05032]),
