@@ -1,0 +1,23 @@
+[project]
+name = "isaacsim_workspace"
+version = "0.0.1"
+description = "Isaac Sim workspace"
+readme = "README.md"
+requires-python = "==3.10.*"
+dependencies = [
+  "catkin-pkg>=1.0.0",
+  "colcon-common-extensions>=0.3.0",
+  "empy==3.3.4",
+  "isaacsim[all,extscache]==4.5.0",
+  "lark-parser>=0.12.0",
+  "pydantic",
+  "pydantic_settings",
+  "pyspacemouse>=1.1.4",
+  "python-dotenv",
+  "scipy>=1.15.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff"
+]
