@@ -1,0 +1,84 @@
+# The robot description defines the generalized coordinates and how to map those
+# to the underlying URDF dofs.
+
+api_version: 1.0
+
+# Defines the generalized coordinates. Each generalized coordinate is assumed
+# to have an entry in the URDF.
+# Lula will only use these joints to control the robot position.
+cspace:
+  - shoulder_pan_joint
+  - shoulder_lift_joint
+  - elbow_joint
+  - wrist_1_joint
+  - wrist_2_joint
+  - wrist_3_joint
+#default_q: [1.5708,-1.5708,1.5708,-1.5708,-1.5708,0.0]
+default_q: [-1.57, -1.57, -1.57, -1.57, 1.57, 3.14]
+
+# Most dimensions of the cspace have a direct corresponding element
+# in the URDF. This list of rules defines how unspecified coordinates
+# should be extracted or how values in the URDF should be overwritten.
+
+cspace_to_urdf_rules:
+
+# Lula uses collision spheres to define the robot geometry in order to avoid
+# collisions with external obstacles.  If no spheres are specified, Lula will
+# not be able to avoid obstacles.
+
+collision_spheres:
+  - base_link_inertia:
+      - "center": [-0.0, 0.0, 0.028]
+        "radius": 0.05
+  - shoulder_link:
+      - "center": [0.0, -0.007, -0.002]
+        "radius": 0.05
+  - upper_arm_link:
+      - "center": [-0.013, 0.0, 0.139]
+        "radius": 0.05
+      - "center": [-0.412, 0.006, 0.144]
+        "radius": 0.05
+      - "center": [-0.07, 0.001, 0.14]
+        "radius": 0.05
+      - "center": [-0.127, 0.002, 0.141]
+        "radius": 0.05
+      - "center": [-0.184, 0.003, 0.141]
+        "radius": 0.05
+      - "center": [-0.241, 0.003, 0.142]
+        "radius": 0.05
+      - "center": [-0.298, 0.004, 0.143]
+        "radius": 0.05
+      - "center": [-0.355, 0.005, 0.143]
+        "radius": 0.05
+  - forearm_link:
+      - "center": [-0.003, 0.0, 0.01]
+        "radius": 0.05
+      - "center": [-0.396, 0.0, 0.007]
+        "radius": 0.05
+      - "center": [-0.059, 0.0, 0.009]
+        "radius": 0.05
+      - "center": [-0.115, 0.0, 0.009]
+        "radius": 0.05
+      - "center": [-0.171, 0.0, 0.009]
+        "radius": 0.05
+      - "center": [-0.227, 0.0, 0.008]
+        "radius": 0.05
+      - "center": [-0.284, 0.0, 0.008]
+        "radius": 0.05
+      - "center": [-0.34, 0.0, 0.007]
+        "radius": 0.05
+  - wrist_1_link:
+      - "center": [0.0, 0.0, 0.0]
+        "radius": 0.05
+  - wrist_2_link:
+      - "center": [0.0, 0.0, 0.0]
+        "radius": 0.05
+  - ee_link:
+      - "center": [0.0, 0.0, 0.0]
+        "radius": 0.05
+      - "center": [0.116, -0.0, 0.0]
+        "radius": 0.05
+      - "center": [0.039, -0.0, 0.0]
+        "radius": 0.05
+      - "center": [0.078, -0.0, 0.0]
+        "radius": 0.05
