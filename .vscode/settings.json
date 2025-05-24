@@ -2,10 +2,12 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "python.defaultInterpreterPath": "./.venv/bin/python",
   "python.analysis.extraPaths": [
+    "${workspaceFolder}/install/interfaces/lib/python3.10/site-packages",
     "/opt/ros/humble/lib/python3.10/site-packages",
     "/opt/ros/humble/local/lib/python3.10/dist-packages"
   ],
   "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/install/interfaces/lib/python3.10/site-packages",
     "/opt/ros/humble/lib/python3.10/site-packages",
     "/opt/ros/humble/local/lib/python3.10/dist-packages"
   ],
