@@ -5,12 +5,12 @@ from datetime import datetime
 from typing import Any, Callable, Dict, List, cast
 
 import numpy as np
-from isaacsim.core.api import World
-from isaacsim.core.api.loggers.data_logger import DataLogger
-from isaacsim.core.api.prims import XFormPrim
-from isaacsim.core.api.robots.robot import Robot
-from isaacsim.core.api.scenes.scene import Scene
-from isaacsim.core.api.tasks.base_task import BaseTask
+from omni.isaac.core import World
+from omni.isaac.core.loggers.data_logger import DataLogger
+from omni.isaac.core.prims import XFormPrim
+from omni.isaac.core.robots.robot import Robot
+from omni.isaac.core.scenes.scene import Scene
+from omni.isaac.core.tasks.base_task import BaseTask
 from omni.isaac.sensor import Camera, ContactSensor
 from PIL import Image
 
