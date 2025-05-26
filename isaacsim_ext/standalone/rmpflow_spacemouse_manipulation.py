@@ -36,7 +36,7 @@ logger = Logger(
     x_form_prim_names=conveni_task.get_params()["x_form_prim_names"]["value"],
     contact_sensor_names=conveni_task.get_params()["contact_sensor_names"]["value"],
     camera_names=conveni_task.get_params()["camera_names"]["value"],
-    action_ref=lambda: action_subscriber.get_applied_action(),
+    action_ref=action_subscriber.get_applied_action,
 )
 timeline_callback = TimelineCallback(
     on_start=logger.start,
@@ -48,7 +48,7 @@ logger.start()
 while simulation_app.is_running():
     my_world.step(render=True)
     if my_world.is_playing():
-        action = action_subscriber.get_applied_action()
+        action = action_subscriber.get_applied_action(my_world.current_time_step_index)
         ur5e.get_articulation_controller().apply_action(
             control_actions=action.arm_action
         )

@@ -6,6 +6,10 @@ from interfaces.msg import SpaceMouseData
 from rclpy.node import Node
 from scipy.spatial.transform import Rotation as R
 
+TRANS_SCALE = 0.01  # スペースマウスの移動量をスケーリングする係数
+ROTATION_SCALE = 0.01  # スペースマウスの回転量をスケーリングする係数
+TIMER_PERIOD = 0.01  # タイマーの周期（秒）
+
 
 class SpaceMousePublisher(Node):
     def __init__(self):
@@ -15,8 +19,7 @@ class SpaceMousePublisher(Node):
         self.publisher = self.create_publisher(SpaceMouseData, "spacemouse/data", 10)
 
         # 10Hzでパブリッシュ
-        timer_period = 0.1  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
+        self.timer = self.create_timer(TIMER_PERIOD, self.timer_callback)
 
         # 初期化
         success = pyspacemouse.open(
@@ -35,12 +38,12 @@ class SpaceMousePublisher(Node):
 
         # メッセージの作成
         msg = SpaceMouseData()
-        msg.pose.position.x = float(state.x)
-        msg.pose.position.y = float(state.y)
-        msg.pose.position.z = float(state.z)
-        yaw = float(state.yaw)
-        pitch = float(state.pitch)
-        roll = float(state.roll)
+        msg.pose.position.x = float(state.x) * TRANS_SCALE
+        msg.pose.position.y = float(state.y) * TRANS_SCALE
+        msg.pose.position.z = float(state.z) * TRANS_SCALE
+        yaw = float(state.yaw) * ROTATION_SCALE
+        pitch = float(state.pitch) * ROTATION_SCALE
+        roll = float(state.roll) * ROTATION_SCALE
         # Use scipy to convert Euler angles (roll, pitch, yaw) to quaternion
         quat = R.from_euler(
             seq="xyz", angles=[roll, pitch, yaw], degrees=False

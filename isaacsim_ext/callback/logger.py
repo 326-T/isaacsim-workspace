@@ -32,7 +32,7 @@ class Logger:
             "right_contact_sensor",
         ],
         camera_names: List[str] = ["left_camera", "right_camera"],
-        action_ref: Callable[[], Dict] = lambda: {},
+        action_ref: Callable[[], Dict] = lambda _: {},
         output_dir: str = ".data/isaacsim_trial",
     ) -> None:
         """
@@ -195,7 +195,7 @@ class Logger:
             "cameras": {
                 name: self._render(camera=camera) for name, camera in cameras.items()
             },
-            "action": self._action_ref(),
+            "action": self._action_ref(self._world.current_time_step_index),
         }
 
     @staticmethod

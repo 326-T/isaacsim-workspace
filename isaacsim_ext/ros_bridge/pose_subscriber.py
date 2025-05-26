@@ -1,4 +1,5 @@
 import threading
+from functools import lru_cache
 from operator import itemgetter
 from typing import List, Optional
 
@@ -64,8 +65,8 @@ class PoseSubscriber(Node):
         self.spin_thread = threading.Thread(target=self.spin, daemon=True)
         self.spin_thread.start()
 
-    def get_applied_action(self) -> Action:
-        print("get_applied_action called")
+    @lru_cache(maxsize=10)
+    def get_applied_action(self, _timestep) -> Action:
         current_position, current_orientation = self.target.get_world_pose()
         next_position = current_position + self.buffer.position
         next_orientation = multiply_quaternions(
@@ -93,7 +94,6 @@ class PoseSubscriber(Node):
         return Action(arm_action=arm_action, gripper_action=gripper_action)
 
     def listener_callback(self, msg: SpaceMouseData):
-        print("listener_callback called")
         self.get_logger().debug(
             f"Received data: position={msg.pose.position}, orientation={msg.pose.orientation}, buttons={msg.gripper}"
         )
