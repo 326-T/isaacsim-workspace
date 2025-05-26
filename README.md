@@ -2,9 +2,48 @@
 
 ## Installation
 
+### Install hidapi for SpaceMouse.
+
 ```bash
-sudo apt update
-sudo apt install libhidapi-dev
+$ sudo apt update
+$ sudo apt install libhidapi-dev
+```
+
+### Install ROS2 Humble.
+
+```bash
+$ sudo apt install ros-humble-desktop
+```
+
+### Install pip dependencies via uv
+
+```bash
+$ pip install uv
+$ uv venv --python=python3.10
+$ uv sync
+```
+
+### Build custom messages.
+
+```bash
+$ cd ros_ws
+$ uv run bash build.sh
+```
+
+## Usage
+
+### Start SpaceMouse Publisher
+
+```bash
+$ cd ros_ws
+$ source install/setup.bash
+$ uv run python -m spacemouse_driver.spacemouse_publisher
+```
+
+### Launch Isaac Sim
+
+```bash
+$ uv run python -m isaacsim_ext.standalone.rmpflow_spacemouse_manipulation
 ```
 
 ## USB/IP over ssh

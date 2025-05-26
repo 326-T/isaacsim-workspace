@@ -14,7 +14,7 @@ from pydantic import BaseModel, ConfigDict
 from rclpy.node import Node
 from scipy.spatial.transform import Rotation as R
 
-from isaacsim_ext.controller.rmpflow_controller import RMPFlowController
+from isaacsim_ext.ros_bridge.rmpflow_controller import RMPFlowController
 
 rclpy.init()
 
